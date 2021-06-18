@@ -19,7 +19,7 @@ const SignIn = () => {
         toggleLoading(true)
 
         fb.auth().signInWithEmailAndPassword(email, password)
-            .then(() => router.push('/private-page'))
+            .then(() => router.push('/dashboard'))
             .catch((error) => {
                 setError(error.message)
                 toggleLoading(false)

@@ -13,7 +13,7 @@ const SignUp = () => {
         event.preventDefault()
         if (event.target.password.value === event.target["confirm-password"].value) {
             fb.auth().createUserWithEmailAndPassword(event.target.email.value, event.target.password.value)
-                .then(() => router.push('/private-page'))
+                .then(() => router.push('/dashboard'))
         } else {
             setError("Passwords must match.")
         }

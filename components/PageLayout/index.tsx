@@ -45,9 +45,9 @@ const PageLayout: React.FC<Props> = ({children, privateRoute, title, redirectPat
         <div className="fixed w-full">
             <div className="h-1 bg-gradient-to-r from-teal-400 to-blue-600"/>
             <div className="flex justify-between py-2.5 px-4 shadow-md items-center bg-white">
-                <a href="https://github.com/nthnluu/no-bs-next"
+                <a href="/"
                    className="flex justify-between items-center font-medium text-lg focus:underline truncate">
-                    🔥 nthnluu/no-bs-next
+                    Moody
                 </a>
                 <div className="items-center">
                     {isAuthenticated ? <Button sizes="md" variant="filled" onClick={signOut}>Sign out</Button> :

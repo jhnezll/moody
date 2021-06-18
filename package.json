@@ -1,5 +1,5 @@
 {
-  "name": "no-bs-next",
+  "name": "moody",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,12 +11,15 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@headlessui/react": "^0.2.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@tailwindcss/ui": "^0.6.2",
     "firebase": "^7.23.0",
     "next": "9.5.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tailwindcss": "^1.9.1"
+    "tailwindcss": "^1.9.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.26.0",
