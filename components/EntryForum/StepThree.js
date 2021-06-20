@@ -11,27 +11,17 @@ export default function StepThree({currentStep, onContinue, onBack, formData, se
     return (
         <MuiThemeProvider theme={Theme}>
             <form onSubmit={onContinue}>
-                <div className="space-y-4" autoComplete="off">
+                <div className="space-y-4 p-2" autoComplete="off">
+
+                    {/*Description*/}
+                    <div>
+                        <h1>{formData.entry}</h1>
+                    </div>
 
                     {/*Emotion*/}
-                    <div className="space-y-2">
-                        <h1>You feel...</h1>
+                    <div className="space-y-2 pt-2">
                         <Chip label={formData.emotion} variant="outlined"/>
                     </div>
-
-                    <div className="bg-gray-100 rounded-xl p-2 space-y-2">
-                        {/*Title*/}
-                        <div>
-                            <h1 className="text-xl">{formData.title}</h1>
-                        </div>
-
-                        {/*Description*/}
-                        <div>
-                            <h1>{formData.entry}</h1>
-                        </div>
-                    </div>
-
-
 
                 </div>
 

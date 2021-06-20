@@ -12,10 +12,11 @@ const StepSendToDatabase = ({currentStep, onContinue, onBack, formData, setFormD
 
     useEffect(() => {
         if (userProfile.uid) {
-            fb.firestore().collection("journals").doc(userProfile.uid).set({
+            fb.firestore().collection(userProfile.uid).doc(formData.title).set({
                 emotion: formData.emotion,
                 title: formData.title,
                 entry: formData.entry,
+                date: formData.date
             })
             console.log(userProfile.uid)
             router.push("/dashboard")

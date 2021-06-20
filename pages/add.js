@@ -10,6 +10,7 @@ export default function Add(){
         emotion: '',
         title: '',
         entry: '',
+        date: new Date(),
     })
 
     const onContinue = (event) => {
@@ -31,7 +32,7 @@ export default function Add(){
         },
         // Step 2
         {
-            title: "Why do you feel this way?",
+            title: "Why do you feel " + formData.emotion,
             content: <StepTwo
                 currentStep={currentStepIndex}
                 onContinue={onContinue}
@@ -42,7 +43,7 @@ export default function Add(){
         },
         // Step 3
         {
-            title: "Review",
+            title: formData.title,
             content: <StepThree
                 currentStep={currentStepIndex}
                 onContinue={onContinue}
