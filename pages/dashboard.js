@@ -1,18 +1,14 @@
-import PageLayout from "../components/PageLayout";
-import {useContext} from "react";
-import SessionContext from "../util/SessionContext";
 import {BottomNavigation, BottomNavigationAction} from "@material-ui/core";
 import {Book, AddBox, Timeline} from '@material-ui/icons';
+import React from "react";
 
-export default function Private() {
-    const {userProfile} = useContext(SessionContext)
-
+export default function Dashboard() {
     return (
-        <PageLayout privateRoute title="Dashboard">
+
             <div className="h-screen flex flex-col justify-center items-center bg-gray-50">
                 {/*Body*/}
                 <div className="mb-auto h-10 bg-green-500">
-                    Content
+
                 </div>
 
                 {/*Footer*/}
@@ -26,6 +22,6 @@ export default function Private() {
             </div>
 
 
-        </PageLayout>
+
     )
 }
