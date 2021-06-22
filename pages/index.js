@@ -5,11 +5,11 @@ import {useRouter} from "next/router";
 
 
 export default function Home() {
-    const {userProfile} = useContext(SessionContext)
+    const {isAuthenticated} = useContext(SessionContext)
     const router = useRouter();
 
     useEffect(() => {
-        if(userProfile.uid != undefined){
+        if(isAuthenticated){
             router.push("/dashboard")
         } else {
             console.log("user not logged in")

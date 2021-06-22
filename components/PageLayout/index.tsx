@@ -1,9 +1,11 @@
-import {ReactElement, useContext, useEffect} from "react";
+import React, {ReactElement, useContext, useEffect} from "react";
 import SessionContext from "../../util/SessionContext";
 import Button from "../forms/Button";
 import {useRouter} from "next/router";
 import fb from "../../util/firebase-config";
 import Head from "next/head";
+import {BottomNavigation, BottomNavigationAction} from "@material-ui/core";
+import {AddBox, Book, Timeline} from "@material-ui/icons";
 
 interface Props {
     children: ReactElement;
@@ -59,6 +61,18 @@ const PageLayout: React.FC<Props> = ({children, privateRoute, title, redirectPat
 
             </div>
         </div>
+        <footer>
+            <div className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
+                {isAuthenticated ?
+                    <BottomNavigation showLabels>
+                        <BottomNavigationAction label="Journal" icon={<Book/>}/>
+                        <BottomNavigationAction label="Add" icon={<AddBox/>}/>
+                        <BottomNavigationAction label="Timeline" icon={<Timeline/>}/>
+                    </BottomNavigation>
+                : null
+                }
+            </div>
+        </footer>
 
         {children}
     </div>

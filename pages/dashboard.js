@@ -41,13 +41,7 @@ export default function Dashboard() {
                 </div>
 
                 {/*Footer*/}
-                <div className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
-                    <BottomNavigation showLabels>
-                        <BottomNavigationAction label="Journal" icon={<Book/>}/>
-                        <BottomNavigationAction label="Add" icon={<AddBox/>}/>
-                        <BottomNavigationAction label="Timeline" icon={<Timeline/>}/>
-                    </BottomNavigation>
-                </div>
+
             </div>
         </PageLayout>
     )
