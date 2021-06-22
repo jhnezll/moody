@@ -1,8 +1,20 @@
 import PageLayout from "../components/PageLayout";
-import Dropdown from "../components/forms/Dropdown";
-import TextInput from "../components/forms/TextInput";
+import {useContext, useEffect} from "react";
+import SessionContext from "../util/SessionContext";
+import {useRouter} from "next/router";
+
 
 export default function Home() {
+    const {userProfile} = useContext(SessionContext)
+    const router = useRouter();
+
+    useEffect(() => {
+        if(userProfile.uid != undefined){
+            router.push("/dashboard")
+        } else {
+            console.log("user not logged in")
+        }
+    })
 
     return (
         <PageLayout title="Welcome to Moody">
