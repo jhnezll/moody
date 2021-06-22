@@ -4,6 +4,7 @@ import React, {useContext, useEffect, useState} from "react";
 import fb from "../util/firebase-config";
 import SessionContext from "../util/SessionContext";
 import EntryCard from "../components/EntryCard";
+import PageLayout from "../components/PageLayout";
 
 function useJournal() {
     const {userProfile} = useContext(SessionContext)
@@ -27,9 +28,10 @@ export default function Dashboard() {
     const journal = useJournal()
 
     return (
+        <PageLayout title="Welcome to Moody">
             <div className="h-screen flex flex-col justify-center bg-gray-50">
                 {/*Body*/}
-                <div className="flex flex-col space-y-4 items-center mb-auto my-4">
+                <div className="h-11/12 flex flex-col space-y-4 items-center mb-auto my-4">
                     {journal.map(journal =>
                         <EntryCard
                             title={journal.title}
@@ -39,7 +41,7 @@ export default function Dashboard() {
                 </div>
 
                 {/*Footer*/}
-                <div className="w-screen h-25 bg-blue-500">
+                <div className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
                     <BottomNavigation showLabels>
                         <BottomNavigationAction label="Journal" icon={<Book/>}/>
                         <BottomNavigationAction label="Add" icon={<AddBox/>}/>
@@ -47,5 +49,6 @@ export default function Dashboard() {
                     </BottomNavigation>
                 </div>
             </div>
+        </PageLayout>
     )
 }

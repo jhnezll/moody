@@ -42,7 +42,7 @@ const PageLayout: React.FC<Props> = ({children, privateRoute, title, redirectPat
                 {title}
             </title>
         </Head>
-        <div className="fixed w-full">
+        <div className="w-full">
             <div className="h-1 bg-gradient-to-r from-teal-400 to-blue-600"/>
             <div className="flex justify-between py-2.5 px-4 shadow-md items-center bg-white">
                 <a href="/"
