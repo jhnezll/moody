@@ -12,7 +12,8 @@ export default function StepOne({currentStep, onContinue, formData, setFormData}
                     <div className="flex place-content-evenly w-full max-h-12">
                         <Button variant="outlined" color="primary" onClick={event => setFormData({
                             ...formData,
-                            emotion: "😭 Terrible"
+                            emotion: "😭 Terrible",
+                            score: 2
                         })} className="rounded-xl">
                             <h3 className="text-black inline-flex">😭 Terrible</h3>
                         </Button>
@@ -20,28 +21,32 @@ export default function StepOne({currentStep, onContinue, formData, setFormData}
 
                         <Button variant="outlined" color="primary" onClick={event => setFormData({
                             ...formData,
-                            emotion: "😩 Not Good"
+                            emotion: "😩 Not Good",
+                            score: 4
                         })} className="rounded-xl">
                             <h3 className="text-black inline-flex">😩 Not Good</h3>
                         </Button>
 
                         <Button variant="outlined" color="primary" onClick={event => setFormData({
                             ...formData,
-                            emotion: "✌️ Alright"
+                            emotion: "✌️ Alright",
+                            score: 6,
                         })} className="rounded-xl">
                             <h3 className="text-black inline-flex">✌️ Alright</h3>
                         </Button>
 
                         <Button variant="outlined" color="primary" onClick={event => setFormData({
                             ...formData,
-                            emotion: "😊 Good"
+                            emotion: "😊 Good",
+                            score: 8,
                         })} className="rounded-xl">
                             <h3 className="text-black inline-flex">😊 Good</h3>
                         </Button>
 
                         <Button variant="outlined" color="primary" onClick={event => setFormData({
                             ...formData,
-                            emotion: "🤩 Amazing"
+                            emotion: "🤩 Amazing",
+                            score: 10
                         })} className="rounded-xl">
                             <h3 className="text-black inline-flex">🤩 Amazing</h3>
                         </Button>

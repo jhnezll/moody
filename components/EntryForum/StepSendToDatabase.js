@@ -14,6 +14,7 @@ const StepSendToDatabase = ({currentStep, onContinue, onBack, formData, setFormD
         if (userProfile.uid) {
             fb.firestore().collection(userProfile.uid).doc(formData.title).set({
                 emotion: formData.emotion,
+                score: formData.score,
                 title: formData.title,
                 entry: formData.entry,
                 date: formData.date

@@ -8,6 +8,7 @@ export default function Add(){
     const [currentStepIndex, setCurrentStepIndex] = useState(0)
     const [formData, setFormData] = useState({
         emotion: '',
+        score: '',
         title: '',
         entry: '',
         date: new Date(),

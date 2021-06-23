@@ -28,7 +28,7 @@ export default function Dashboard() {
     const journal = useJournal()
 
     return (
-        <PageLayout title="Welcome to Moody">
+        <PageLayout title="Journal Entries">
             <div className="h-screen flex flex-col justify-center bg-gray-50">
                 {/*Body*/}
                 <div className="h-11/12 flex flex-col space-y-4 items-center mb-auto my-4">
@@ -39,9 +39,6 @@ export default function Dashboard() {
                         />
                     )}
                 </div>
-
-                {/*Footer*/}
-
             </div>
         </PageLayout>
     )
